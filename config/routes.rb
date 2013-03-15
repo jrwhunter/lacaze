@@ -3,10 +3,12 @@ Lacaze::Application.routes.draw do
 
   root to: 'static_pages#home'
   
-  match '/signup',  to: 'users#new'
-
+  match '/directions',   to: 'static_pages#directions'
+  match '/instructions',   to: 'static_pages#instructions'
+  match '/things_to_do',   to: 'static_pages#things_to_do'
+  match '/pool',   to: 'static_pages#pool'
+  match '/spring_autumn',   to: 'static_pages#about'
   match '/help',    to: 'static_pages#help'
-  match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'  
 
 
