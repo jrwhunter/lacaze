@@ -38,23 +38,32 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 2em;
   letter-spacing: -2px;
-  margin-bottom: 30px;
+   margin-bottom: 30px;
   text-align: center;
 }
 
 h2 {
   font-size: 1.7em;
   letter-spacing: -1px;
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: normal;
-  color: $grayLight;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  font-weight: bold;
 }
 
 p {
-  font-size: 1.1em;
+  font-size: 1.0em;
   line-height: 1.7em;
 }
 /* header */

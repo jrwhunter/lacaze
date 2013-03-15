@@ -1,5 +1,21 @@
 Lacaze::Application.routes.draw do
  
+  get "static_pages/home"
+
+  get "static_pages/directions"
+
+  get "static_pages/instructions"
+
+  get "static_pages/things_to_do"
+
+  get "static_pages/pool"
+
+  get "static_pages/spring_autumn"
+
+  get "static_pages/help"
+
+  get "static_pages/contact"
+
   root to: 'static_pages#home'
   
   match '/directions',      to: 'static_pages#directions'
