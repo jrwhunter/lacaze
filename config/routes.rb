@@ -1,15 +1,14 @@
 Lacaze::Application.routes.draw do
-  get "users/new"
-
+ 
   root to: 'static_pages#home'
   
-  match '/directions',   to: 'static_pages#directions'
-  match '/instructions',   to: 'static_pages#instructions'
-  match '/things_to_do',   to: 'static_pages#things_to_do'
-  match '/pool',   to: 'static_pages#pool'
-  match '/spring_autumn',   to: 'static_pages#about'
-  match '/help',    to: 'static_pages#help'
-  match '/contact', to: 'static_pages#contact'  
+  match '/directions',      to: 'static_pages#directions'
+  match '/instructions',    to: 'static_pages#instructions'
+  match '/things_to_do',    to: 'static_pages#things_to_do'
+  match '/pool',            to: 'static_pages#pool'
+  match '/spring_autumn',   to: 'static_pages#spring_autumn'
+  match '/help',            to: 'static_pages#help'
+  match '/contact',         to: 'static_pages#contact'  
 
 
   # The priority is based upon order of creation:
