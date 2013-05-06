@@ -21,6 +21,7 @@ Lacaze::Application.routes.draw do
   match '/directions',      to: 'static_pages#directions'
   match '/instructions',    to: 'static_pages#instructions'
   match '/things_to_do',    to: 'static_pages#things_to_do'
+  match '/taxis',           to: 'static_pages#taxis'
   match '/pool',            to: 'static_pages#pool'
   match '/spring_autumn',   to: 'static_pages#spring_autumn'
   match '/help',            to: 'static_pages#help'

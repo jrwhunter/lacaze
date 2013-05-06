@@ -29,7 +29,9 @@ textarea {
   }  
 }
 
-
+.container {
+    font-size: larger;    
+}
 
 /* typography */
 
@@ -38,23 +40,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 2.5em;
   letter-spacing: -2px;
-   margin-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   text-align: center;
 }
 
 h2 {
   font-size: 1.7em;
   letter-spacing: -1px;
-  margin-top: 10px;
+  margin-top: 25px;
   margin-bottom: 10px;
   text-align: left;
   font-weight: bold;
 }
 
 h3 {
-  font-size: 1.2em;
+  font-size: 1.4em;
   letter-spacing: -1px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -63,9 +66,13 @@ h3 {
 }
 
 p {
-  font-size: 1.0em;
   line-height: 1.7em;
 }
+
+li {
+  line-height: 1.7em;
+}
+
 /* header */
 
 #logo {
