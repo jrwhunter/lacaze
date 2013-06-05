@@ -1,8 +1,15 @@
 @import "bootstrap";
+@import url("http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css");
 
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
 
 /* universal */
 
@@ -42,7 +49,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 2.5em;
   letter-spacing: -2px;
-  margin-top: 30px;
+  margin-top: 50px;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -116,4 +123,28 @@ footer {
       margin-left: 10px;
     }
   }
+}
+
+.print-page {
+  text-align: right;
+  margin-right: 10px;
+}
+
+@media print{
+  header, footer, .print-page{
+    display: none;
+  }
+  p, li, h2, h3 {
+    margin-right: 75px;
+    margin-left: 75px;
+  }
+}
+
+#centered-inline {
+  width:500px;
+  margin:0px auto;
+  text-align:center; /* THIS IS THE ONLY CHANGE FROM ABOVE */
+  padding:15px;
+  border:1px dashed #333;
+  background-color:#eee;
 }

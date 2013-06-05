@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@booking) do |f| %>
+      <% if @booking.errors.any? %>
+        <div id="error_explanation">
+          <div class="alert alert-error">
+            The form contains <%= pluralize(@booking.errors.count, "error") %>.
+          </div>
+          <ul>
+            <% @booking.errors.full_messages.each do |msg| %>
+              <li>* <%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :start %>
+      <% if !@booking.nil? then val = @booking.start end %>
+      <%= f.datepicker 'start', :dateFormat => "DD d MM yy", :defaultDate => val, :yearRange => "2010:2015" %>
+
+      <%= f.label :end %>
+      <% if !@booking.nil? then val = @booking.end end %>
+      <%= f.datepicker 'end', :dateFormat => "DD d MM yy", :defaultDate => val, :yearRange => "2010:2015" %>
+
+      <p class="padding">Save the booking      
+      <%= f.submit "Save", class: "btn btn-large btn-primary" %>
+      </p>
+    <% end %>
+  </div>
+</div>

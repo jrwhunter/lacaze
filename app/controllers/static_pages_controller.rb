@@ -14,10 +14,13 @@ class StaticPagesController < ApplicationController
   def pool
   end
 
-  def spring_autumn
+  def autumn_spring
   end
 
   def help
+  end
+
+  def photos
   end
 
   def contact

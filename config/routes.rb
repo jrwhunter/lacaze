@@ -1,21 +1,8 @@
 Lacaze::Application.routes.draw do
  
-  get "static_pages/home"
+  resources :bookings
 
-  get "static_pages/directions"
-
-  get "static_pages/instructions"
-
-  get "static_pages/things_to_do"
-
-  get "static_pages/pool"
-
-  get "static_pages/spring_autumn"
-
-  get "static_pages/help"
-
-  get "static_pages/contact"
-
+ 
   root to: 'static_pages#home'
   
   match '/directions',      to: 'static_pages#directions'
@@ -23,9 +10,15 @@ Lacaze::Application.routes.draw do
   match '/things_to_do',    to: 'static_pages#things_to_do'
   match '/taxis',           to: 'static_pages#taxis'
   match '/pool',            to: 'static_pages#pool'
-  match '/spring_autumn',   to: 'static_pages#spring_autumn'
+  match '/autumn_spring',   to: 'static_pages#autumn_spring'
+  match '/photos',          to: 'static_pages#photos'
   match '/help',            to: 'static_pages#help'
   match '/contact',         to: 'static_pages#contact'  
+  match '/bookings',        to: 'bookings#index'  
+  match '/new_booking',     to: 'bookings#new'  
+  match '/edit_booking',     to: 'bookings#edit'  
+  match '/delete_booking',     to: 'bookings#destroy'  
+  match '/edit_or_delete_booking',     to: 'bookings#edit_or_delete'  
 
 
   # The priority is based upon order of creation:

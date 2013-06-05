@@ -1,0 +1,11 @@
+<% provide(:title, 'Edit or Delete Booking') %>
+
+<body>
+	<h1>
+		Edit or delete booking
+	</h1>
+	 <div id="centered-inline">
+	 	<%= link_to "<button class = 'btn btn-large btn-primary'>Edit</button>".html_safe, edit_booking_path(@booking.id), :id => "button_id" %>
+	 	<%= link_to "<button class = 'btn btn-large btn-danger'>Delete</button>".html_safe, { :action => "destroy", :id => @booking.id, }, :method => "delete", data: { confirm: "You sure?" } %>
+	</div>
+</body>

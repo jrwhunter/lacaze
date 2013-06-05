@@ -1,16 +1,35 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
+<header class="header navbar navbar-fixed-top navbar-inverse">
   <div class="navbar-inner">
     <div class="container">
       <%= link_to "Lacaze", root_path, id: "logo" %>
       <nav>
         <ul class="nav pull-right">
-          <li><%= link_to "Home",           root_path %></li>
-          <li><%= link_to "Directions",     directions_path %></li>
+          <li class = "dropdown">
+            <a id="travel" class="dropdown-toggle" data-toggle="dropdown" href="#">
+              Travel
+              <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="directions" role="menu">
+              <li><%= link_to "Directions",     directions_path %></li>
+              <li><%= link_to "Toulonjac Map", "http://www.map-france.com/Toulonjac-12200/map-Toulonjac.html"%></li>
+              <li><%= link_to "Taxis",   taxis_path %></li>
+            </ul>
+          </li>
           <li><%= link_to "Instructions",   instructions_path %></li>
           <li><%= link_to "Things to do",   things_to_do_path %></li>
-          <li><%= link_to "Taxis",   taxis_path %></li>
           <li><%= link_to "Pool", pool_path %></li>
-          <li><%= link_to "Spring/Autumn",  spring_autumn_path %></li>
+          <li><%= link_to "Autumn and Spring", autumn_spring_path %></li>
+          <li class = "dropdown">
+            <a id="bookings" class="dropdown-toggle" data-toggle="dropdown" href="#">
+              Bookings
+              <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="bookings" role="menu">
+              <li><%= link_to "All bookings",  bookings_path %></li>
+              <li><%= link_to "New booking",  new_booking_path %></li>
+            </ul>
+          </li>
+          <li><%= link_to "Photos",   photos_path %></li>
           <li><%= link_to "HELP",           help_path %></li>
         </ul>
       </nav>
