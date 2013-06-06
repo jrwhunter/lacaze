@@ -1,15 +1,12 @@
 class BookingsController < ApplicationController
   def new
     @booking = Booking.new
-    if params[:start] != nil
-      @booking.start = params[:start]
-    end
+    @booking.start = params[:start]
+    #end
   end
 
   def edit
     @booking = Booking.find(params[:id])
-    @booking.start = @booking.start.strftime('%A %d %B %Y')
-    @booking.end = @booking.end.strftime('%A %d %B %Y')
     render 'edit'
   end
 

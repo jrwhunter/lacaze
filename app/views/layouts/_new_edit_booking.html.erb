@@ -1,3 +1,12 @@
+
+
+<script>
+  $(document).ready(function(){
+    $("#booking_start").datepicker({  dateFormat: "DD d MM yy" });
+    $("#booking_end").datepicker  ({  dateFormat: "DD d MM yy" });
+  })
+</script>
+
 <div class="row">
   <div class="span6 offset3">
     <%= form_for(@booking) do |f| %>
@@ -19,16 +28,23 @@
       <%= f.text_field :name %>
 
       <%= f.label :start %>
-      <% if !@booking.nil? then val = @booking.start end %>
-      <%= f.datepicker 'start', :dateFormat => "DD d MM yy", :defaultDate => val, :yearRange => "2010:2015" %>
+      <input type="text"  id='booking_start' name="booking[start]" 
+          value= "<%= !@booking.nil? && !@booking.start.nil? ? @booking.start.strftime('%A %-d %B %Y'):nil  %>" 
+      /> 
 
       <%= f.label :end %>
-      <% if !@booking.nil? then val = @booking.end end %>
-      <%= f.datepicker 'end', :dateFormat => "DD d MM yy", :defaultDate => val, :yearRange => "2010:2015" %>
+      <input type="text"  id='booking_end' name="booking[end]" 
+          value= "<%= !@booking.nil? ? 
+                          !@booking.end.nil? ? @booking.end.strftime('%A %-d %B %Y') : 
+                              !@booking.start.nil? ? @booking.start.strftime('%A %-d %B %Y') : nil
+                          : nil 
+                          %>" 
+      />
 
       <p class="padding">Save the booking      
-      <%= f.submit "Save", class: "btn btn-large btn-primary" %>
+        <%= f.submit "Save", class: "btn btn-large btn-primary" %>
       </p>
     <% end %>
+    <%= link_to "<button class = 'btn btn-large'>Cancel</button>".html_safe, bookings_path%>
   </div>
 </div>

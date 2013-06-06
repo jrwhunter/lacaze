@@ -5,8 +5,7 @@
 
     $(document).ready(function() {   
 
-        monthsList('#months-list');
-     
+    
         var calendar = $('#calendar').fullCalendar({
             header: {
                 left: 'today',
@@ -35,30 +34,7 @@
 
         <% if (@booking != nil) %>
         $('#calendar').fullCalendar('gotoDate', <%=@booking.start.year%>, <%=@booking.start.month-1%>);
-        <%end%>
-
-        $(document).on('click', '#months-list a', function() {
-            // get month from month anchor hash
-            var month = this.hash.substring(1);
-            // go to new month
-            $('#calendar').fullCalendar('gotoDate', goToMonth(month));
-            return false;
-        });
-
-        function goToMonth(month) {
-            var date = new Date();
-            var d = date.getDate();
-            var m = month !== undefined ? parseInt(month, 0) : date.getMonth();
-            var y = $('#calendar').fullCalendar('getDate').getFullYear();
-            return new Date(y, m, d);
-        }
-
-        function monthsList(element) {
-            var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-            for (var m = 0; m < monthNames.length; m++) {
-                $(element).append('<li><a href="#' + m + '">' + monthNames[m] + '</a></li>');
-             }
-        }
+        <%end%>       
     });
 
     function getDayName(date){
@@ -104,29 +80,12 @@
         width: 600px;
         margin: 0 auto;
         }
-            #months-list {
-                margin: 20px
-            }
-            #months-list li {
-                display: inline;
-                list-style: none;
-                padding: 5px;
-                background: #333;
-            }
-
-            li a {
-                color: #fff;
-                padding: 10px;
-                text-decoration: none
-            }
-
 </style>
 </head>
 <body>
     <h1>
         Bookings for:
     </h1>
-     <ul id="months-list"></ul>
     <div id='calendar'>
     </div>
     <div>
