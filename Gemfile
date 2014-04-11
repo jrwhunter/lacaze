@@ -10,6 +10,7 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'jquery_datepicker'
 gem 'twitter-bootstrap-rails'
+gem 'rake', '10.2.2'
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'
