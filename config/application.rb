@@ -62,6 +62,9 @@ module Lacaze
     # Enable the asset pipeline
     config.assets.enabled = true
 
+    # Added 12 April 14 at Lacaze to try to overdome heroku loading error:
+    #config.assets.initialize_on_precompile = false
+
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
   end
