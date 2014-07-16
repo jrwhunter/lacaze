@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 2.5em;
   letter-spacing: -2px;
   margin-top: 50px;
   margin-bottom: 30px;
@@ -55,7 +55,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.7em;
+  font-size: 2em;
   letter-spacing: -1px;
   margin-top: 25px;
   margin-bottom: 10px;
@@ -64,7 +64,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.1em;
+  font-size: 1.7em;
   letter-spacing: -1px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -73,14 +73,16 @@ h3 {
 }
 
 p {
+  font-size: 1.2em;
   line-height: 1.1em;
 }
 
 li {
-  line-height: 1.1em;
+  font-size: 1.2em;line-height: 1.1em;
 }
 
 /* header */
+
 
 #logo {
   float: left;
